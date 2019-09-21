@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WHMCS.NET", "WHMCS.NET\WHMCS.NET.csproj", "{4069E515-11C9-4D72-A9CD-49038D4D1FD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WHMCS.NET.Example", "WHMCS.NET.Example\WHMCS.NET.Example.csproj", "{6ED2927B-E04B-4706-9BFF-E3642B4C8ED3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4069E515-11C9-4D72-A9CD-49038D4D1FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4069E515-11C9-4D72-A9CD-49038D4D1FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4069E515-11C9-4D72-A9CD-49038D4D1FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4069E515-11C9-4D72-A9CD-49038D4D1FD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ED2927B-E04B-4706-9BFF-E3642B4C8ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ED2927B-E04B-4706-9BFF-E3642B4C8ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ED2927B-E04B-4706-9BFF-E3642B4C8ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ED2927B-E04B-4706-9BFF-E3642B4C8ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
