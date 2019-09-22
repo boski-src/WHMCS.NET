@@ -8,7 +8,7 @@ WHMCS .NET Core API Client
 
 ✔️ Client
 
-✔ Billing
+✔️ Billing
 
 ##### Todo:
 ✅ Authentication
