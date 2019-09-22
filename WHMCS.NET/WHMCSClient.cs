@@ -6,6 +6,7 @@ using Newtonsoft.Json;
 using WHMCS.NET.Modules;
 using WHMCS.NET.Modules.Auth;
 using WHMCS.NET.Modules.Client;
+using WHMCS.NET.Modules.Order;
 
 namespace WHMCS.NET
 {
@@ -26,6 +27,7 @@ namespace WHMCS.NET
         {
             RegisterModule<AuthModule>();
             RegisterModule<ClientModule>();
+            RegisterModule<OrderModule>();
         }
 
         public void RegisterModule<TModule>() where TModule : class, IModule, new()
