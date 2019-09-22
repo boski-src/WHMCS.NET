@@ -30,8 +30,9 @@ namespace WHMCS.NET.Modules.Order
             return await Client.Execute<CancelOrderRequest, CancelOrderResponse>(request);
         }
 
-        public async Task<DeleteOrderResponse> Delete(DeleteOrderRequest request)
+        public async Task<DeleteOrderResponse> Delete(int orderId)
         {
+            var request = new DeleteOrderRequest { OrderId = orderId };
             return await Client.Execute<DeleteOrderRequest, DeleteOrderResponse>(request);
         }
 

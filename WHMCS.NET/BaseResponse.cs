@@ -4,6 +4,7 @@ namespace WHMCS.NET
     {
         public string Result { get; set; }
         public string Message { get; set; }
-        public bool Succeed { get; set; }
+        public bool IsSucceed { get; set; }
+        public bool IsFailed { get; set; }
     }
 }

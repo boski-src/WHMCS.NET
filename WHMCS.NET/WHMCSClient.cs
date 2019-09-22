@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using WHMCS.NET.Modules;
 using WHMCS.NET.Modules.Auth;
+using WHMCS.NET.Modules.Billing;
 using WHMCS.NET.Modules.Client;
 using WHMCS.NET.Modules.Order;
 
@@ -28,6 +29,7 @@ namespace WHMCS.NET
             RegisterModule<AuthModule>();
             RegisterModule<ClientModule>();
             RegisterModule<OrderModule>();
+            RegisterModule<BillingModule>();
         }
 
         public void RegisterModule<TModule>() where TModule : class, IModule, new()
@@ -68,7 +70,11 @@ namespace WHMCS.NET
             var responseContent = await response.Content.ReadAsStringAsync();
             var responseObject = JsonConvert.DeserializeObject<TResponse>(responseContent);
 
-            responseObject.Succeed = responseObject.Result == "success";
+            responseObject.IsSucceed = responseObject.Result == "success";
+            responseObject.IsFailed = responseObject.Result == "error";
+
+            if (LoadedConfig.ThrowErrors && responseObject.IsFailed)
+                throw new WHMCSException(responseObject.Message);
 
             return responseObject;
         }

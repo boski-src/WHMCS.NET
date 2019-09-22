@@ -34,6 +34,33 @@ namespace WHMCS.NET
         GetProducts,
         GetPromotions,
         OrderFraudCheck,
-        PendingOrder
+        PendingOrder,
+
+        // Billing
+
+        AcceptQuote,
+        AddBillableItem,
+        AddCredit,
+        AddInvoicePayment,
+        AddPayMethod,
+        AddTransaction,
+        ApplyCredit,
+        CapturePayment,
+        CreateInvoice,
+        CreateQuote,
+        DeletePayMethod,
+        DeleteQuote,
+        GenInvoices,
+        GetCredits,
+        GetInvoice,
+        GetInvoices,
+        GetPayMethods,
+        GetQuotes,
+        GetTransactions,
+        SendQuote,
+        UpdateInvoice,
+        UpdatePayMethod,
+        UpdateQuote,
+        UpdateTransaction,
     }
 }

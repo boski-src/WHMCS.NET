@@ -19,7 +19,7 @@ namespace WHMCS.NET.Example
 //                "PASSWORD"
 //            );
 
-            var config = new WHMCSConfig("https://www.thelhost.com/panel/includes/api.php", apiCredentials);
+            var config = new WHMCSConfig("https://www.domain.com/panel/includes/api.php", apiCredentials);
             var client = new WHMCSClient(config);
 
             var response = await client.GetModule<ClientModule>().Browse();

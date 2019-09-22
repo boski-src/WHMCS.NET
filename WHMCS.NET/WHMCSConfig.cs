@@ -6,17 +6,24 @@ namespace WHMCS.NET
         public string AuthType { get; set; }
         public APICredentials ApiCredentials { get; set; }
         public LoginCredentials LoginCredentials { get; set; }
+        public bool ThrowErrors { get; set; }
 
-        public WHMCSConfig(string url, APICredentials apiCredentials)
+        protected WHMCSConfig(string url, bool throwErrors)
         {
             Url = url;
+            ThrowErrors = throwErrors;
+        }
+
+        public WHMCSConfig(string url, APICredentials apiCredentials, bool throwErrors = false)
+            : this(url, throwErrors)
+        {
             AuthType = AuthTypes.API;
             ApiCredentials = apiCredentials;
         }
 
-        public WHMCSConfig(string url, LoginCredentials loginCredentials)
+        public WHMCSConfig(string url, LoginCredentials loginCredentials, bool throwErrors = false)
+            : this(url, throwErrors)
         {
-            Url = url;
             AuthType = AuthTypes.API;
             LoginCredentials = loginCredentials;
         }

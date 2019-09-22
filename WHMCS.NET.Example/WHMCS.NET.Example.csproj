@@ -6,7 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\WHMCS.NET\WHMCS.NET.csproj" />
+        <ProjectReference Include="..\WHMCS.NET\WHMCS.NET.csproj" />
     </ItemGroup>
 
 </Project>
